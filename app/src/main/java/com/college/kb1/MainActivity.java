@@ -215,6 +215,8 @@ public class MainActivity extends AppCompatActivity {
                     if (chance){
                         chance = false;
                         Toast.makeText(this, "Yah Semua Salah! ^v^", Toast.LENGTH_SHORT).show();
+                        toggleButton(1, false);
+                        toggleButton(2, false);
                         gameIsPlaying = false;
                     }else {
                         chance = true;
@@ -235,6 +237,8 @@ public class MainActivity extends AppCompatActivity {
                     if (chance){
                         chance = false;
                         Toast.makeText(this, "Yah Semua Salah! ^v^", Toast.LENGTH_SHORT).show();
+                        toggleButton(1, false);
+                        toggleButton(2, false);
                         gameIsPlaying = false;
                     } else {
                         chance = true;
