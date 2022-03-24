@@ -5,48 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <!-- MIDDLE -->
-    <RadioGroup
+    <GridLayout
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:rowCount="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <GridLayout
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_easy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:rowCount="2">
+            android:text="EASY" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/radio_easy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="EASY" />
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEDIUM" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/radio_medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="MEDIUM" />
-
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/radio_difficult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="DIFFICULT" />
-        </GridLayout>
-    </RadioGroup>
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_difficult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIFFICULT" />
+    </GridLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,8 +59,8 @@
             android:id="@+id/tv_op_quiz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40sp"
             android:layout_margin="16dp"
+            android:textSize="40sp"
             tools:text="+" />
 
         <TextView
@@ -74,7 +70,6 @@
             android:textSize="40sp"
             tools:text="7" />
     </LinearLayout>
-
 
 
     <!-- Score -->
@@ -132,33 +127,36 @@
         android:id="@+id/lb_player1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="PLAYER 1"
         android:textSize="30sp"
-        android:layout_margin="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_p1_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_p1_mid"
         app:layout_constraintEnd_toEndOf="@+id/btn_p1_mid"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="24" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_p1_mid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_p1_bot"
         app:layout_constraintEnd_toEndOf="@+id/btn_p1_bot"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="13" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_p1_bot"
         android:layout_width="wrap_content"
@@ -186,9 +184,9 @@
         android:id="@+id/btn_p2_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_p2_mid"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="21" />
@@ -197,19 +195,20 @@
         android:id="@+id/btn_p2_mid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_p2_bot"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="32" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_p2_bot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="99" />
